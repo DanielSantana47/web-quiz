@@ -1,12 +1,7 @@
-type answers = {
-    order: number,
-    text: string
-}
-
 export type Quiz = {
-    id: number,
+    id: number
     question: string,
     src: string
     answers: string[],
-    answer: string
+    answer: number
 }
