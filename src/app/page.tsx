@@ -10,7 +10,7 @@ const Page = ()=> {
     <div className="">
       <CountProvider>
         <AnswersProvider>
-          <div className="w-screen h-screen grid grid-cols-2">
+          <div className="w-screen h-screen grid grid-cols-1 lg:grid-cols-2">
             <LeftSide/>
             <RightSide/>
           </div>
