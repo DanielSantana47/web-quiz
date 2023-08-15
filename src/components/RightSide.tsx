@@ -8,24 +8,40 @@ export const RightSide = ()=> {
     const countCtx = useContext(CountContext)
     const correctCtx = useContext(AnswersContext)
 
-    const [isCorrect, setIsCorrect] = useState<number | null>(null)
+    const [isCorrect, setIsCorrect] = useState<boolean | null>(null)
+    const [blockButton, setBlockButton] = useState<boolean>(false)
 
-    const handleAnswerButton = (id: number)=> {
+    const handleAnswerButton = (id :number)=> {
         if (countCtx?.count === undefined) return
-            if(quizList[countCtx?.count].answer === id) {
+            if(quizList[countCtx?.count].answers[id] === quizList[countCtx.count].answer) {
                 correctCtx?.setCorrect(correctCtx.correct + 1)
+                setIsCorrect(true)
+            } else {
+                setIsCorrect(false)
             }
-            setIsCorrect(id)
-            
+            setBlockButton(true)
+
             setTimeout(()=>
-            countCtx.setCount(countCtx.count + 1),
-            400
+            setBlockButton(false)
+            ,
+            500
             )
-    }
 
-    console.log(isCorrect)
-
-    const handleResetButton = ()=> {
+            setTimeout(()=>
+            setIsCorrect(null)
+            ,
+            500
+            )
+            setTimeout(()=>
+            countCtx.setCount(countCtx.count + 1)
+            ,
+            500
+            )
+        }
+        
+        console.log(isCorrect)
+        
+        const handleResetButton = ()=> {
         correctCtx?.setCorrect(0)
         countCtx?.setCount(-1)
     }
@@ -47,13 +63,14 @@ export const RightSide = ()=> {
                     <Reveal>
                         <div className="grid grid-cols-1 gap-6">
                             {quizList[countCtx.count].answers.map((item, id)=>(
-                                <div key={id} onClick={()=>handleAnswerButton(id)} className={
-                                    `px-56 py-3 rounded-md bg-teal-500 text-white cursor-pointer font-semibold hover:text-teal-500 hover:bg-zinc-200 transition-all duration-200
-                                    ${isCorrect !== null && isCorrect === id && isCorrect === quizList[countCtx.count].answer && 'bg-green-500'} 
-                                    ${isCorrect !== null && isCorrect === id && isCorrect !== quizList[countCtx.count].answer && 'bg-red-500'}  
+                                <button disabled={blockButton} key={id} onClick={()=>handleAnswerButton(id)} className={
+                                    `px-56 py-3 rounded-md text-white cursor-pointer font-semibold hover:text-teal-500 hover:bg-zinc-200 transition-all duration-200 disabled:cursor-default
+                                    ${isCorrect === null && "bg-teal-500"}
+                                    ${isCorrect === true && "bg-green-500"}
+                                    ${isCorrect === false && "bg-red-500"}
                                     `}>
                                     {item}
-                                </div>
+                                </button>
                             ))}
                         </div>
                     </Reveal>

@@ -3,5 +3,5 @@ export type Quiz = {
     question: string,
     src: string
     answers: string[],
-    answer: number
+    answer: string
 }

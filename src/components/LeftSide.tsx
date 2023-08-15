@@ -36,7 +36,7 @@ export const LeftSide = ()=> {
             <div className="container mx-auto relative h-full w-full flex flex-col items-center justify-center gap-16">
                 <span className="absolute top-0 text-5xl font-semibold border-b-2 py-2">Você acertou {correctCtx?.correct}/{quizList.length}</span>
                 {correctCtx?.correct !== undefined && correctCtx.correct / quizList.length > 0.5 &&
-                    <div className="w-80 h-80 rounded-full bg-cover bg-center bg-[url('https://img.freepik.com/free-vector/flat-colorful-applause-background_23-2148162466.jpg?w=2000')]">
+                    <div className="w-80 h-80 bg-cover bg-center bg-[url('https://kitdepontos.com.br/wp-content/uploads/2016/09/pack-de-beats-palminha-claps-funk-kitdepontos.com_.br_.png')]">
                     
                     </div>
                 }
@@ -47,7 +47,7 @@ export const LeftSide = ()=> {
                 }
                 
                 <h1 className="text-7xl font-semibold text-center">
-                    {correctCtx?.correct !== undefined && correctCtx.correct / quizList.length > 0.5 && 'Parabéns'}
+                    {correctCtx?.correct !== undefined && correctCtx.correct / quizList.length > 0.5 && 'Parabéns!'}
                     {correctCtx?.correct !== undefined && correctCtx.correct / quizList.length < 0.5 && 'Precisa Melhorar'}
                 </h1>
             </div>

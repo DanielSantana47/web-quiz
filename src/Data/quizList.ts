@@ -8,7 +8,7 @@ export const quizList: Quiz[] = [
         answers: [
             "Nova Zelândia", "Reino Unido", "Austrália", "Ilhas Cook"
         ],
-        answer: 2    
+        answer: "Austrália" 
     },
     {
         id:2,
@@ -17,7 +17,7 @@ export const quizList: Quiz[] = [
         answers: [
             "Stocolmo","Helsinque", "Oslo", "Copenhage"
         ],
-        answer: 1
+        answer: "Helsinque"
     },
     {
         id:3,
@@ -26,7 +26,7 @@ export const quizList: Quiz[] = [
         answers: [
             "Mônaco", "Polônia", "Tâilandia", "Indonésia"
         ],
-        answer: 3   
+        answer: "Indonésia"
     },
     { 
         id:4,
@@ -35,7 +35,7 @@ export const quizList: Quiz[] = [
         answers: [
             "Tegucigalpa", "San José", "Belmopã", "Santo Domingo"
         ],
-        answer: 0    
+        answer: "Tegucigalpa"
     },
     {
         id:5,
@@ -44,9 +44,53 @@ export const quizList: Quiz[] = [
         answers: [
             "Argélia", "Marrocos", "Líbia", "Tunísia"
         ],
-        answer: 2    
+        answer: "Líbia"
     },
-    
+    {
+        id:6,
+        question: "Qual a capital do país com a bandeira à baixo?",
+        src: "https://upload.wikimedia.org/wikipedia/commons/4/41/Flag_of_Austria.svg",
+        answers: [
+            "Liubliana","Budapeste", "Berlim", "Viena"
+        ],
+        answer: "Viena"
+    },
+    {
+        id:7,
+        question: "A bandeira à baixo é de qual país?",
+        src: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Flag_of_Luxembourg.svg/800px-Flag_of_Luxembourg.svg.png",
+        answers: [
+            "Luxemburgo", "Eslováquia", "Russia", "Países Baixos"
+        ],
+        answer: "Luxemburgo"
+    },
+    { 
+        id:8,
+        question: "Qual a capital do país com a bandeira à baixo?",
+        src: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Flag_of_Israel.svg/1200px-Flag_of_Israel.svg.png",
+        answers: [
+            "Beirute", "Jerusalém", "tel aviv", "Amã"
+        ],
+        answer: "Jerusalém"
+    },
+    {
+        id:9,
+        question: "A bandeira à baixo é de qual país?",
+        src: "https://upload.wikimedia.org/wikipedia/commons/9/9a/Flag_of_Bulgaria.svg",
+        answers: [
+            "Hungria", "Albania", "Lituânia", "Bulgária"
+        ],
+        answer: "Bulgária"
+    },
+    { 
+        id:10,
+        question: "Qual a capital do país com a bandeira à baixo?",
+        src: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Flag_of_Colombia.svg/1200px-Flag_of_Colombia.svg.png",
+        answers: [
+            "Caracas", "Quito", "Bogotá", "Lima"
+        ],
+        answer: "Bogotá"
+    },
     
 ]
 
