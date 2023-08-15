@@ -61,7 +61,7 @@ export const RightSide = ()=> {
                 <div className="h-full w-full  relative flex flex-col items-center justify-center">
                     <h2 className="absolute top-0 text-teal-500 text-center text-xl md:text-2xl lg:text-4xl py-2 md:border-b-2 border-b border-teal-500">Selecione uma resposta abaixo</h2>
                     <Reveal>
-                        <div className="grid grid-cols-1 lg:grid-cols-1 gap-4 sm:gap-6 mt-20 lg:mt-0">
+                        <div className="grid grid-cols-1 lg:grid-cols-1 gap-4 sm:gap-6 mb-4 lg:mt-0">
                             {quizList[countCtx.count].answers.map((item, id)=>(
                                 <button disabled={blockButton} key={id} onClick={()=>handleAnswerButton(id)} className={
                                     `w-auto lg:px-32 xl:px-48 md:px-48 px-24 py-3 rounded-md text-white cursor-pointer font-semibold hover:text-teal-500 hover:bg-zinc-200 transition-all duration-200 disabled:cursor-default
