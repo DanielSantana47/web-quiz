@@ -64,7 +64,7 @@ export const RightSide = ()=> {
                         <div className="grid grid-cols-1 lg:grid-cols-1 gap-4 sm:gap-6 mb-2 mt-6 lg:mt-0">
                             {quizList[countCtx.count].answers.map((item, id)=>(
                                 <button disabled={blockButton} key={id} onClick={()=>handleAnswerButton(id)} className={
-                                    `w-auto lg:px-32 xl:px-48 md:px-48 px-24 py-3 rounded-md text-white cursor-pointer font-semibold hover:text-teal-500 hover:bg-zinc-200 transition-all duration-200 disabled:cursor-default
+                                    `w-auto lg:px-32 xl:px-48 md:px-48 px-24 py-3 rounded-md text-white cursor-pointer font-semibold lg:hover:text-teal-500 lg:hover:bg-zinc-200 transition-all duration-200 disabled:cursor-default
                                     ${isCorrect === null && "bg-teal-500"}
                                     ${isCorrect === true && "bg-green-500"}
                                     ${isCorrect === false && "bg-red-500"}
